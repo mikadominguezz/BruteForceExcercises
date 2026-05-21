@@ -138,7 +138,7 @@ def breakHashWithSalt(targetHash, salt, dictionary):
 
 if __name__ == "__main__":
     print("╔════════════════════════════════════════════════════════╗")
-    print("║       PARTE 2: CRACKEAR CON MD5 + SALT CONOCIDO       ║")
+    print("║       PARTE 2: CRACKEAR CON MD5 + SALT CONOCIDO        ║")
     print("╚════════════════════════════════════════════════════════╝")
     print()
     

@@ -231,3 +231,142 @@ Lo ideal sería un algoritmo lento como bcrypt/argon2 y salt aleatorio largo:
 - Algoritmo fuerte (SHA-256, BLAKE2, etc.)
 - Salt largo y aleatorio (16+ caracteres)
 - Derivación lenta (pbkdf2, bcrypt, scrypt, argon2)
+
+
+## PARTE 4: Ejercicio En Clase
+
+Durante la clase, se pide que puedan encontrar la password y salt del siguiente hash.
+Se sabe que el SALT tiene 3 dígitos.
+968587884750727ee05016d360474d33
+
+Como es tan largo el proceso de encontrar la contraseña, les dejo los resultados del ataque.
+
+```bash
+╔════════════════════════════════════════════════════════╗
+║   PARTE 4: CRACKEAR HASH CON SALT DESCONOCIDO          ║
+║     (Detecta automáticamente: MD5, SHA-1, SHA-256...)  ║
+║              (Salt: 0-999 - 3 dígitos)                 ║
+╚════════════════════════════════════════════════════════╝
+
+[*] Salt: Desconocido (0-999)
+[*] Hash objetivo: 968587884750727ee05016d360474d33
+[*] Longitud del hash: 32 caracteres
+[*] Algoritmos posibles: MD5
+
+[*] Cargando diccionario en memoria...
+[*] Diccionario cargado: 14,344,381 contraseñas
+[*] Iniciando ataque con salt desconocido (fuerza bruta de salts)...
+[*] Rango de salts a probar: 0 - 999 (1000 combinaciones)
+[*] Estrategia: Por cada algoritmo, salt y contraseña
+
+[*] ===== Probando algoritmo: MD5 =====
+[*] Probando con salt al final...
+[*] Contraseña 0 (tiempo transcurrido: 0.0s)
+[*] Contraseña 100,000 (tiempo transcurrido: 55.9s)
+[*] Contraseña 200,000 (tiempo transcurrido: 111.9s)
+[*] Contraseña 300,000 (tiempo transcurrido: 167.9s)
+[*] Contraseña 400,000 (tiempo transcurrido: 223.7s)
+[*] Contraseña 500,000 (tiempo transcurrido: 279.4s)
+[*] Contraseña 600,000 (tiempo transcurrido: 335.3s)
+[*] Contraseña 700,000 (tiempo transcurrido: 391.0s)
+[*] Contraseña 800,000 (tiempo transcurrido: 446.8s)
+[*] Contraseña 900,000 (tiempo transcurrido: 502.7s)
+[*] Contraseña 1,000,000 (tiempo transcurrido: 558.4s)
+[*] Contraseña 1,100,000 (tiempo transcurrido: 614.4s)
+[*] Contraseña 1,200,000 (tiempo transcurrido: 670.6s)
+[*] Contraseña 1,300,000 (tiempo transcurrido: 726.7s)
+[*] Contraseña 1,400,000 (tiempo transcurrido: 783.3s)
+[*] Contraseña 1,500,000 (tiempo transcurrido: 839.5s)
+[*] Contraseña 1,600,000 (tiempo transcurrido: 895.7s)
+[*] Contraseña 1,700,000 (tiempo transcurrido: 951.7s)
+[*] Contraseña 1,800,000 (tiempo transcurrido: 1008.1s)
+[*] Contraseña 1,900,000 (tiempo transcurrido: 1064.3s)
+[*] Contraseña 2,000,000 (tiempo transcurrido: 1120.6s)
+[*] Contraseña 2,100,000 (tiempo transcurrido: 1176.7s)
+[*] Contraseña 2,200,000 (tiempo transcurrido: 1233.2s)
+[*] Contraseña 2,300,000 (tiempo transcurrido: 1289.6s)
+[*] Contraseña 2,400,000 (tiempo transcurrido: 1345.9s)
+[*] Contraseña 2,500,000 (tiempo transcurrido: 1402.7s)
+[*] Contraseña 2,600,000 (tiempo transcurrido: 1459.2s)
+[*] Contraseña 2,700,000 (tiempo transcurrido: 1515.7s)
+[*] Contraseña 2,800,000 (tiempo transcurrido: 1572.5s)
+[*] Contraseña 2,900,000 (tiempo transcurrido: 1629.0s)
+[*] Contraseña 3,000,000 (tiempo transcurrido: 1685.5s)
+[*] Contraseña 3,100,000 (tiempo transcurrido: 1741.8s)
+[*] Contraseña 3,200,000 (tiempo transcurrido: 1797.9s)
+[*] Contraseña 3,300,000 (tiempo transcurrido: 1854.9s)
+[*] Contraseña 3,400,000 (tiempo transcurrido: 1910.7s)
+[*] Contraseña 3,500,000 (tiempo transcurrido: 1967.4s)
+[*] Contraseña 3,600,000 (tiempo transcurrido: 2023.7s)
+[*] Contraseña 3,700,000 (tiempo transcurrido: 2080.5s)
+[*] Contraseña 3,800,000 (tiempo transcurrido: 2136.4s)
+[*] Contraseña 3,900,000 (tiempo transcurrido: 2192.4s)
+[*] Contraseña 4,000,000 (tiempo transcurrido: 2250.4s)
+[*] Contraseña 4,100,000 (tiempo transcurrido: 2306.5s)
+[*] Contraseña 4,200,000 (tiempo transcurrido: 2363.5s)
+[*] Contraseña 4,300,000 (tiempo transcurrido: 2419.6s)
+[*] Contraseña 4,400,000 (tiempo transcurrido: 2476.0s)
+[*] Contraseña 4,500,000 (tiempo transcurrido: 2531.8s)
+[*] Contraseña 4,600,000 (tiempo transcurrido: 2587.8s)
+[*] Contraseña 4,700,000 (tiempo transcurrido: 2644.3s)
+[*] Contraseña 4,800,000 (tiempo transcurrido: 2700.8s)
+[*] Contraseña 4,900,000 (tiempo transcurrido: 2757.5s)
+[*] Contraseña 5,000,000 (tiempo transcurrido: 2813.6s)
+[*] Contraseña 5,100,000 (tiempo transcurrido: 2869.8s)
+[*] Contraseña 5,200,000 (tiempo transcurrido: 2925.8s)
+[*] Contraseña 5,300,000 (tiempo transcurrido: 2983.2s)
+[*] Contraseña 5,400,000 (tiempo transcurrido: 3039.9s)
+[*] Contraseña 5,500,000 (tiempo transcurrido: 3096.7s)
+[*] Contraseña 5,600,000 (tiempo transcurrido: 3152.7s)
+[*] Contraseña 5,700,000 (tiempo transcurrido: 3208.4s)
+[*] Contraseña 5,800,000 (tiempo transcurrido: 3264.7s)
+[*] Contraseña 5,900,000 (tiempo transcurrido: 3320.9s)
+[*] Contraseña 6,000,000 (tiempo transcurrido: 3376.8s)
+[*] Contraseña 6,100,000 (tiempo transcurrido: 3433.8s)
+[*] Contraseña 6,200,000 (tiempo transcurrido: 3489.9s)
+[*] Contraseña 6,300,000 (tiempo transcurrido: 3545.6s)
+[*] Contraseña 6,400,000 (tiempo transcurrido: 3601.0s)
+[*] Contraseña 6,500,000 (tiempo transcurrido: 3656.0s)
+[*] Contraseña 6,600,000 (tiempo transcurrido: 3712.0s)
+[*] Contraseña 6,700,000 (tiempo transcurrido: 3768.2s)
+[*] Contraseña 6,800,000 (tiempo transcurrido: 3823.4s)
+[*] Contraseña 6,900,000 (tiempo transcurrido: 3879.8s)
+[*] Contraseña 7,000,000 (tiempo transcurrido: 3935.6s)
+[*] Contraseña 7,100,000 (tiempo transcurrido: 3991.4s)
+[*] Contraseña 7,200,000 (tiempo transcurrido: 4047.1s)
+[*] Contraseña 7,300,000 (tiempo transcurrido: 4103.1s)
+[*] Contraseña 7,400,000 (tiempo transcurrido: 4160.4s)
+[*] Contraseña 7,500,000 (tiempo transcurrido: 4216.5s)
+[*] Contraseña 7,600,000 (tiempo transcurrido: 4272.4s)
+[*] Contraseña 7,700,000 (tiempo transcurrido: 4328.2s)
+[*] Contraseña 7,800,000 (tiempo transcurrido: 4383.4s)
+[*] Contraseña 7,900,000 (tiempo transcurrido: 4439.0s)
+[*] Contraseña 8,000,000 (tiempo transcurrido: 4494.9s)
+[*] Contraseña 8,100,000 (tiempo transcurrido: 4551.5s)
+[*] Contraseña 8,200,000 (tiempo transcurrido: 4608.1s)
+[*] Contraseña 8,300,000 (tiempo transcurrido: 4664.1s)
+[*] Contraseña 8,400,000 (tiempo transcurrido: 4720.2s)
+[*] Contraseña 8,500,000 (tiempo transcurrido: 4776.4s)
+[*] Contraseña 8,600,000 (tiempo transcurrido: 4832.9s)
+[*] Contraseña 8,700,000 (tiempo transcurrido: 4889.3s)
+[*] Contraseña 8,800,000 (tiempo transcurrido: 4945.2s)
+
+============================================================
+[+] ¡CONTRASEÑA ENCONTRADA!
+[+] Algoritmo: MD5
+[+] Contraseña: d0ntn33dn0p4ss
+[+] Salt: 999
+[+] Texto hasheado: d0ntn33dn0p4ss999
+[+] Hash verificado: 968587884750727ee05016d360474d33
+[+] Intentos totales: 8,856,910,000
+[+] Tiempo total: 4976.942111 segundos
+============================================================
+
+[*] Resumen del análisis:
+    - Algoritmo encontrado: MD5
+    - Salt encontrado: 999
+    - Contraseña: d0ntn33dn0p4ss
+    - Posición del salt: final
+    - Tiempo de ataque: 4976.942111 segundos
+    - Intentos totales: 8,856,910,000
+```

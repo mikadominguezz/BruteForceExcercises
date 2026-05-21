@@ -139,7 +139,7 @@ def breakHashWithUnknownSalt(targetHash, dictionary, saltRange):
 if __name__ == "__main__":
     print("╔════════════════════════════════════════════════════════╗")
     print("║      PARTE 3: CRACKEAR CON MD5 + SALT DESCONOCIDO      ║")
-    print("║              (Salt: 0-999 - 3 dígitos)                ║")
+    print("║              (Salt: 0-999 - 3 dígitos)                 ║")
     print("╚════════════════════════════════════════════════════════╝")
     print()
     
